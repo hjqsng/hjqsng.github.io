@@ -1,91 +1,88 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>公司介绍</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>培训机构</title>
     <style>
+        /* 可选：添加一些基本样式 */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        h1, h2 {
-            text-align: center;
-        }
-        p {
-            text-align: justify;
-        }
-        .company-info {
-            margin-top: 20px;
-            padding: 10px;
+            margin: 0;
+            padding: 0;
             background-color: #f0f0f0;
-            border-radius: 5px;
         }
-        .swiper-container {
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .carousel {
+            max-width: 100%;
+            height: auto;
+        }
+        .main {
+            background: #fff;
+            padding: 20px;
             margin-top: 20px;
-            width: 100%;
-            height: 300px;
         }
-        .swiper-slide img {
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+        }
+        /* 可选：响应式调整 */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+            .main, .sidebar {
+                width: 100%;
+                float: none;
+            }
         }
     </style>
 </head>
 <body>
-
-<h1>欢迎访问我们的公司网站</h1>
-
-<div class="company-info">
-    <h2>公司简介</h2>
-    <p>我们是一家致力于提供优质产品和服务的公司。成立于XX年，公司总部位于XX地区。我们专注于XX行业，致力于满足客户需求并提供创新解决方案。</p>
-    
-    <h2>我们的使命</h2>
-    <p>通过技术创新和卓越服务，为客户创造价值，推动行业发展。</p>
-    
-    <h2>联系方式</h2>
-    <p>欢迎随时联系我们：<br>
-    电话：+86-123456789<br>
-    邮箱：info@example.com<br>
-    地址：XX市XX区XX街道XX号</p>
-</div>
-
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="image1.jpg" alt="Slide 1"></div>
-        <div class="swiper-slide"><img src="image2.jpg" alt="Slide 2"></div>
-        <div class="swiper-slide"><img src="image3.jpg" alt="Slide 3"></div>
+    <header>
+        <h1>欢迎来到我们的培训机构</h1>
+    </header>
+    <div class="container">
+        <div class="carousel">
+            <img src="carousel-image1.jpg" alt="轮播图1">
+            <img src="carousel-image2.jpg" alt="轮播图2">
+            <img src="carousel-image3.jpg" alt="轮播图3">
+        </div>
+        <section class="main">
+            <h2>关于我们</h2>
+            <p>我们的培训机构专注于提供高质量的教育服务...</p>
+            <h2>我们的课程</h2>
+            <ul>
+                <li>课程1</li>
+                <li>课程2</li>
+                <li>课程3</li>
+            </ul>
+        </section>
     </div>
-    <!-- 如果需要分页器 -->
-    <div class="swiper-pagination"></div>
-    <!-- 如果需要导航按钮 -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-</div>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        loop: true,  // 循环模式
-        autoplay: {
-            delay: 3000,  // 自动播放间隔时间，单位为毫秒
-        },
-        pagination: {
-            el: '.swiper-pagination',  // 分页器
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',  // 下一个按钮
-            prevEl: '.swiper-button-prev',  // 上一个按钮
-        },
-    });
-</script>
-
+    <footer>
+        <p>&copy; 2024 培训机构. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
