@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司介绍</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+        .company-info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .swiper-container {
+            margin-top: 20px;
+            width: 100%;
+            height: 300px;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<h1>欢迎访问我们的公司网站</h1>
+
+<div class="company-info">
+    <h2>公司简介</h2>
+    <p>我们是一家致力于提供优质产品和服务的公司。成立于XX年，公司总部位于XX地区。我们专注于XX行业，致力于满足客户需求并提供创新解决方案。</p>
+    
+    <h2>我们的使命</h2>
+    <p>通过技术创新和卓越服务，为客户创造价值，推动行业发展。</p>
+    
+    <h2>联系方式</h2>
+    <p>欢迎随时联系我们：<br>
+    电话：+86-123456789<br>
+    邮箱：info@example.com<br>
+    地址：XX市XX区XX街道XX号</p>
+</div>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="image1.jpg" alt="Slide 1"></div>
+        <div class="swiper-slide"><img src="image2.jpg" alt="Slide 2"></div>
+        <div class="swiper-slide"><img src="image3.jpg" alt="Slide 3"></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,  // 循环模式
+        autoplay: {
+            delay: 3000,  // 自动播放间隔时间，单位为毫秒
+        },
+        pagination: {
+            el: '.swiper-pagination',  // 分页器
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',  // 下一个按钮
+            prevEl: '.swiper-button-prev',  // 上一个按钮
+        },
+    });
+</script>
+
+</body>
+</html>
