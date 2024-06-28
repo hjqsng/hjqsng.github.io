@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>涵江区青少年宫</title>
     <style>
+    /* 基本的轮播图样式 */
+    .slideshow {
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    .slideshow img {
+        width: 100%;
+        display: block;
+    }
+    .slideshow .slides {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    .slideshow .slide {
+        min-width: 100%;
+    }
         /* 可选：添加一些基本样式 */
         body {
             font-family: Arial, sans-serif;
@@ -64,12 +82,28 @@
     <header>
         <h1>欢迎来到涵江区青少年宫</h1>
     </header>
-    <div class="container">
-        <div class="carousel">
-            <img src="3c76712fb1b2bef8434cf35e977c4989.jpg" alt="轮播图1">
-            <img src="carousel-image2.jpg" alt="轮播图2">
-            <img src="carousel-image3.jpg" alt="轮播图3">
-        </div>
+<section class="slideshow">
+    <div class="slides">
+        <div class="slide"><img src="3c76712fb1b2bef8434cf35e977c4989.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="slide2.jpg" alt="Slide 2"></div>
+        <div class="slide"><img src="slide3.jpg" alt="Slide 3"></div>
+    </div>
+</section>
+
+<script>
+    // 简单的JavaScript代码实现自动轮播
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function nextSlide() {
+        slides[currentSlide].style.transform = 'translateX(-100%)';
+        currentSlide = (currentSlide + 1) % totalSlides;
+        slides[currentSlide].style.transform = 'translateX(0)';
+    }
+
+    setInterval(nextSlide, 3000); // 自动轮播间隔时间（毫秒）
+</script>
         <section class="main">
             <h2>关于我们</h2>
             <p>涵江区青少年宫是广东智慧少年宫集团旗下的一所公司，</p>
@@ -87,7 +121,7 @@
     <div class="team-member">
         <img src="team-member1.jpg" alt="团队成员1">
         <h3>高高</h3>
-        <p>涵江区青少年宫教学部主任</p>
+        <p>涵江区青少年宫教学部主任，曾任...</p>
     </div>
     <div class="team-member">
         <img src="team-member2.jpg" alt="团队成员2">
